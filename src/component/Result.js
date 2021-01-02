@@ -3,6 +3,8 @@ import { Col, ListGroup, Row, Badge, Modal, Button } from "react-bootstrap";
 import { numberWithCommas } from "../utils/utils";
 import { Sum } from "@lundiak/react-sum";
 import ModalComponent from "./ModalComponent";
+import axios from "axios";
+import { API_URL } from "../utils/constans";
 
 export default class Result extends Component {
   constructor(props) {
@@ -61,6 +63,12 @@ export default class Result extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
+
+    axios.put(API_URL+"keranjang/"+event.id).then((res) => {
+      
+    }).catch((err) => {
+
+    })
   }
   render() {
     return (

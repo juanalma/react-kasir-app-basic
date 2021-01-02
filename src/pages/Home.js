@@ -85,7 +85,7 @@ class Home extends Component {
     axios
       .get(API_URL + "keranjangs?product.id=" + value.id)
       .then((res) => {
-        if (res.data.length == 0) {
+        if (res.data.length === 0) {
           const cart = {
             jumlah: 1,
             total_harga: value.harga,
